@@ -115,3 +115,19 @@ playwright._impl._errors.TargetClosedError: Target page, context or browser has 
 2025-11-29 02:36:40 | ERROR    | Scraper error: [Errno 32] Broken pipe
 2025-11-29 02:36:40 | INFO     | Committing changes...
 2025-11-29 02:36:40 | INFO     | Committed: chore(scraper): auto-scrape 2025-11-29 02:36
+2025-11-29 02:36:40 | INFO     | Committed log updates
+2025-11-29 02:36:40 | INFO     | Sync cycle complete
+2025-11-29 02:36:40 | INFO     | ----------------------------------------
+2025-11-29 02:36:40 | INFO     | Starting PR cycle...
+2025-11-29 02:36:42 | INFO     | Managing PR...
+2025-11-29 02:36:43 | INFO     | Pushing to branch 'scraper-updates'...
+2025-11-29 02:36:43 | ERROR    | Command failed: git checkout scraper-updates
+2025-11-29 02:36:43 | ERROR    | stderr: error: Your local changes to the following files would be overwritten by checkout:
+	logs/scraper.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+2025-11-29 02:36:43 | ERROR    | Failed to push: Command '['git', 'checkout', 'scraper-updates']' returned non-zero exit status 1.
+2025-11-29 02:36:43 | ERROR    | Failed to push to PR branch
+2025-11-29 02:36:43 | INFO     | PR cycle complete
+2025-11-29 02:36:43 | INFO     | Run once mode, exiting...
