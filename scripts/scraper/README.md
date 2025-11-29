@@ -15,7 +15,7 @@ A parallel web scraper that automatically archives news articles from markdown l
 
 - **Python 3.10+**
 - **gh CLI** - GitHub CLI for authentication and PR creation
-  - Install: https://cli.github.com/
+  - Install: <https://cli.github.com/>
   - Authenticate: `gh auth login`
 - **Google DNS recommended** - For reliable DNS resolution (see [DNS Setup](#dns-setup))
 
