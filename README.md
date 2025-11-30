@@ -43,7 +43,7 @@
 - **`/residents/` 居民討論**：收集居民在各平台的討論、互助訊息及聲音。
 - **`/docs/` 官方文件**：
   - 政府部門回覆及公開信件
-  - 宏福苑業主立案法團管理委員會會議記錄（2021-2025，共34份）：[PDF格式](content/docs/meeting_minutes/pdf/README.md) | [Markdown格式](content/docs/meeting_minutes/markdown/README.md)
+  - 宏福苑業主立案法團管理委員會會議記錄（2021-2025，共 34 份）：[PDF 格式](content/docs/meeting_minutes/pdf/README.md) | [Markdown 格式](content/docs/meeting_minutes/markdown/README.md)
 
 ## 四、主要研究與技術議題
 
@@ -109,7 +109,7 @@
 **範例 / Example:**
 
 ```markdown
-- [2021-10-04](./2021-10-04.pdf) - 2021年10月4日
+- [2021-10-04](./2021-10-04.pdf) - 2021 年 10 月 4 日
   - **Original URL**: https://example.com/document.pdf
   - **Collection Time**: 2025-11-27 14:30
   - **Collection Method**: 網上下載 (Web download)
@@ -187,6 +187,12 @@ Pull Request 適用於：
 - 補充可引用來源的資料
 - 新增 timeline 條目、文件摘要或分析
 
+#### 下載所需套件
+
+```bash
+pip install -r requirements.txt
+```
+
 ---
 
 如不熟悉 GitHub，可直接於 Issue 中留言，我們亦會協助整理。
@@ -198,6 +204,7 @@ Pull Request 適用於：
 - **`.github/workflows/`**：GitHub Actions 自動化流程
   - `publish.yml`：自動構建並發布網站至 GitHub Pages
   - `lint.yml`：自動檢查 Markdown 格式及代碼風格 (Linting)
+  - `auto-review.yml`：自動通知專案維護者要求審視 Pull Request
 - **`scripts/scraper/`**：新聞自動爬蟲 (News Scraper)
   - 用於定時抓取各大媒體的最新報道
   - 包含 `scraper.py` (主程式) 及 `scraped_urls.json` (已抓取紀錄)
@@ -315,7 +322,7 @@ To ensure documents can serve as valid evidence, please include the following in
 **Example:**
 
 ```markdown
-- [2021-10-04](./2021-10-04.pdf) - 2021年10月4日
+- [2021-10-04](./2021-10-04.pdf) - 2021 年 10 月 4 日
   - **Original URL**: https://example.com/document.pdf
   - **Collection Time**: 2025-11-27 14:30
   - **Collection Method**: 網上下載 (Web download)
@@ -393,6 +400,12 @@ Pull Requests are suitable for:
 - Adding verified data
 - Updating timelines, summaries, and technical analyses
 
+#### Required Dependency Installation
+
+```bash
+pip install -r requirements.txt
+```
+
 ---
 
 If you are unfamiliar with GitHub, you may also leave a comment in Issues and maintainers will assist with formatting and integration.
@@ -404,6 +417,7 @@ This repository includes automation tools and CI/CD workflows for developers:
 - **`.github/workflows/`**: GitHub Actions workflows
   - `publish.yml`: Automatically builds and deploys the site to GitHub Pages
   - `lint.yml`: Automatically checks Markdown formatting and code style (Linting)
+  - `auto-review.yml`：Automatically request project reviwers to review Pull Request
 - **`scripts/scraper/`**: Automated News Scraper
   - Scheduled to fetch the latest reports from major media outlets
   - Includes `scraper.py` (main script) and `scraped_urls.json` (history record)
