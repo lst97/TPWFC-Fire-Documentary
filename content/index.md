@@ -66,6 +66,14 @@
 
 為方便公眾共同完善內容，本存庫歡迎任何形式的補充、修訂與建議。以下為簡單的操作方式。
 
+### 📝 不熟悉 GitHub？使用 Google 表格提交
+
+如你不熟悉 GitHub 操作，可透過以下 Google 表格提交資料，我們會協助將內容整理至存庫：
+
+👉 [資料提交表格 / Data Submission Form](https://docs.google.com/forms/d/e/1FAIpQLScQF_RKTDJNKE0xcyKRTmdKnSouRkQFciO2SiAtgMpA-TVHxQ/viewform)
+
+---
+
 ### 1. 提交 Issue（提出資料、錯誤更正或建議）
 
 如欲補充資料、指出錯誤或提出改善建議，可按照以下步驟：
@@ -186,6 +194,14 @@ Contributions and additional data are welcome.
 
 To facilitate community collaboration, this repository accepts Issues and Pull Requests.
 Below are basic instructions.
+
+### 📝 Not Familiar with GitHub? Use Google Form
+
+If you're not familiar with GitHub, you can submit information via our Google Form and we'll help integrate it into the repository:
+
+👉 [Data Submission Form / 資料提交表格](https://docs.google.com/forms/d/e/1FAIpQLScQF_RKTDJNKE0xcyKRTmdKnSouRkQFciO2SiAtgMpA-TVHxQ/viewform)
+
+---
 
 ### 1. Submitting an Issue (new information, corrections, suggestions)
 
