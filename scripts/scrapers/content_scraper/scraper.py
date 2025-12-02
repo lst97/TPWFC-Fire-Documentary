@@ -392,6 +392,7 @@ async def scrape_domain_queue(
             log(f"  ✓ Saved ({len(html) // 1024}KB)")
         else:
             results["failed"] += 1
+            results["failed_urls"].append(url)  # Track failed URL
             log("  ✗ Failed")
 
         # Rate limit delay between requests to same domain
@@ -437,11 +438,11 @@ async def run_scraper_async(
                 if len(urls) > 3:
                     print(f"  ... and {len(urls) - 3} more")
         print(f"\nWould scrape {len(new_urls)} URLs across {len(domains)} domains")
-        return
+        return {"success": 0, "failed": 0, "failed_urls": []}
 
     if not new_urls:
         log("No new URLs to scrape")
-        return
+        return {"success": 0, "failed": 0, "failed_urls": []}
 
     # Group URLs by domain
     domains = group_urls_by_domain(new_urls)
@@ -457,7 +458,7 @@ async def run_scraper_async(
     log("🚀 Starting parallel scraper...")
     print()
 
-    results = {"success": 0, "failed": 0}
+    results = {"success": 0, "failed": 0, "failed_urls": []}
     progress = {"current": 0, "total": len(new_urls)}
 
     async with async_playwright() as p:
@@ -484,15 +485,17 @@ async def run_scraper_async(
     log(f"📊 Total:   {results['success'] + results['failed']}")
     log("=" * 50)
 
+    return results
+
 
 def run_scraper(
     dry_run: bool = False,
     source_filter: str = None,
     limit: int = None,
     verbose: bool = False,
-):
-    """Wrapper to run async scraper"""
-    asyncio.run(run_scraper_async(dry_run, source_filter, limit, verbose))
+) -> dict | None:
+    """Wrapper to run async scraper. Returns results dict with success, failed, failed_urls."""
+    return asyncio.run(run_scraper_async(dry_run, source_filter, limit, verbose))
 
 
 def main():
