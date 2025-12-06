@@ -27,3 +27,7 @@
 ### 2025-12-01
 
 - [Painstaking search for victims of Hong Kong fire continues but some may never be found, official says](https://edition.cnn.com/2025/12/01/world/hong-kong-fire-search-nears-end-intl-hnk)
+
+
+### 2025-12-02
+- [‘My heart is broken’: Domestic worker mourns sister who died in Hong Kong fire](https://edition.cnn.com/2025/12/02/world/video/hong-kong-fire-domestic-worker-tai-po-digvid)
