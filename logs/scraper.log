@@ -2333,3 +2333,236 @@ playwright._impl._errors.TargetClosedError: Target page, context or browser has 
 2025-12-07 04:37:36 | INFO     | Already up to date with upstream
 2025-12-07 04:37:36 | INFO     | Running scraper...
 2025-12-07 04:37:36 | INFO     | Found 595 new URLs to scrape
+2025-12-07 05:02:59 | INFO     | Updated cumulative stats: 627 success, 34 failed across 2 cycles
+2025-12-07 05:02:59 | INFO     | Scraper results: 562 success, 33 failed
+2025-12-07 05:02:59 | INFO     | Committing changes...
+2025-12-07 05:03:05 | INFO     | Committed: chore(scraper): auto-scrape 2025-12-07 05:03
+2025-12-07 05:03:15 | INFO     | Pushed to origin successfully
+2025-12-07 05:03:15 | INFO     | Sync cycle complete
+2025-12-07 05:03:15 | INFO     | ----------------------------------------
+2025-12-07 05:03:15 | INFO     | Starting PR cycle...
+2025-12-07 05:03:17 | INFO     | Pushed to origin successfully
+2025-12-07 05:03:17 | INFO     | Managing PR...
+2025-12-07 05:03:17 | INFO     | PR #6 exists, updating description with fresh stats...
+2025-12-07 05:03:22 | INFO     | Updated PR #6 with fresh stats
+2025-12-07 05:03:22 | INFO     | PR cycle complete
+2025-12-07 05:03:22 | INFO     | Run once mode, exiting...
+2025-12-07 14:41:59 | INFO     | ============================================================
+2025-12-07 14:41:59 | INFO     | News Scraper Daemon Starting
+2025-12-07 14:41:59 | INFO     | Fork: hk-hack-007/Hong-Kong-Fire-Documentary-i
+2025-12-07 14:41:59 | INFO     | Upstream: adminlby/Hong-Kong-Fire-Documentary
+2025-12-07 14:41:59 | INFO     | Sync interval: 10 minutes
+2025-12-07 14:41:59 | INFO     | PR interval: 60 minutes
+2025-12-07 14:41:59 | INFO     | ============================================================
+2025-12-07 14:42:00 | INFO     | gh CLI authenticated
+2025-12-07 14:42:00 | INFO     | Setting up git remotes...
+2025-12-07 14:42:00 | INFO     | Configured origin remote
+2025-12-07 14:42:01 | INFO     | gh CLI authenticated
+2025-12-07 14:42:01 | INFO     | ----------------------------------------
+2025-12-07 14:42:01 | INFO     | Running periodic health check...
+2025-12-07 14:42:02 | INFO     | gh CLI authenticated
+2025-12-07 14:42:02 | INFO     | Health check passed
+2025-12-07 14:42:02 | INFO     | ----------------------------------------
+2025-12-07 14:42:02 | INFO     | Starting sync cycle...
+2025-12-07 14:42:02 | INFO     | Syncing with upstream...
+2025-12-07 14:42:05 | INFO     | Behind upstream by 1 commits, merging...
+2025-12-07 14:42:06 | WARNING  | Stash pop failed, dropping stash to continue
+2025-12-07 14:42:06 | INFO     | Synced with upstream successfully
+2025-12-07 14:42:06 | INFO     | Running scraper...
+2025-12-07 14:42:07 | INFO     | Found 83 new URLs to scrape
+2025-12-07 14:42:42 | INFO     | Daemon stopped by user
+2025-12-07 14:42:42 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 335, in scrape_url_async
+    raise ValueError("Page content too short, likely blocked")
+ValueError: Page content too short, likely blocked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 507, in bounded_scrape
+    await scrape_domain_queue(domain, urls, browser, config, registry, results, progress)
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 393, in scrape_domain_queue
+    html, success = await scrape_url_async(url_info, context, config, browser=browser)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 357, in scrape_url_async
+    return await scrape_url_async(url_info, context, config, retries + 1, browser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 357, in scrape_url_async
+    return await scrape_url_async(url_info, context, config, retries + 1, browser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 361, in scrape_url_async
+    await page.close()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\async_api\_generated.py", line 9794, in close
+    await self._impl_obj.close(runBeforeUnload=run_before_unload, reason=reason)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_page.py", line 833, in close
+    await self._channel.send("close", None, locals_to_params(locals()))
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-07 14:42:42 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 335, in scrape_url_async
+    raise ValueError("Page content too short, likely blocked")
+ValueError: Page content too short, likely blocked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 507, in bounded_scrape
+    await scrape_domain_queue(domain, urls, browser, config, registry, results, progress)
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 393, in scrape_domain_queue
+    html, success = await scrape_url_async(url_info, context, config, browser=browser)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 357, in scrape_url_async
+    return await scrape_url_async(url_info, context, config, retries + 1, browser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 357, in scrape_url_async
+    return await scrape_url_async(url_info, context, config, retries + 1, browser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 361, in scrape_url_async
+    await page.close()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\async_api\_generated.py", line 9794, in close
+    await self._impl_obj.close(runBeforeUnload=run_before_unload, reason=reason)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_page.py", line 833, in close
+    await self._channel.send("close", None, locals_to_params(locals()))
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-07 14:42:44 | INFO     | ============================================================
+2025-12-07 14:42:44 | INFO     | News Scraper Daemon Starting
+2025-12-07 14:42:44 | INFO     | Fork: hk-hack-007/Hong-Kong-Fire-Documentary-i
+2025-12-07 14:42:44 | INFO     | Upstream: adminlby/Hong-Kong-Fire-Documentary
+2025-12-07 14:42:44 | INFO     | Sync interval: 10 minutes
+2025-12-07 14:42:44 | INFO     | PR interval: 60 minutes
+2025-12-07 14:42:44 | INFO     | ============================================================
+2025-12-07 14:42:44 | INFO     | gh CLI authenticated
+2025-12-07 14:42:44 | INFO     | Setting up git remotes...
+2025-12-07 14:42:44 | INFO     | Configured origin remote
+2025-12-07 14:42:45 | INFO     | gh CLI authenticated
+2025-12-07 14:42:45 | INFO     | ----------------------------------------
+2025-12-07 14:42:45 | INFO     | Running periodic health check...
+2025-12-07 14:42:46 | INFO     | gh CLI authenticated
+2025-12-07 14:42:46 | INFO     | Health check passed
+2025-12-07 14:42:46 | INFO     | ----------------------------------------
+2025-12-07 14:42:46 | INFO     | Starting sync cycle...
+2025-12-07 14:42:46 | INFO     | Syncing with upstream...
+2025-12-07 14:42:47 | INFO     | Already up to date with upstream
+2025-12-07 14:42:47 | INFO     | Running scraper...
+2025-12-07 14:42:47 | INFO     | Found 79 new URLs to scrape
+2025-12-07 14:42:49 | INFO     | Daemon stopped by user
+2025-12-07 14:43:47 | INFO     | ============================================================
+2025-12-07 14:43:47 | INFO     | News Scraper Daemon Starting
+2025-12-07 14:43:47 | INFO     | Fork: hk-hack-007/Hong-Kong-Fire-Documentary-i
+2025-12-07 14:43:47 | INFO     | Upstream: adminlby/Hong-Kong-Fire-Documentary
+2025-12-07 14:43:47 | INFO     | Sync interval: 10 minutes
+2025-12-07 14:43:47 | INFO     | PR interval: 60 minutes
+2025-12-07 14:43:47 | INFO     | ============================================================
+2025-12-07 14:43:54 | INFO     | gh CLI authenticated
+2025-12-07 14:43:54 | INFO     | Setting up git remotes...
+2025-12-07 14:43:55 | INFO     | Configured origin remote
+2025-12-07 14:43:55 | INFO     | gh CLI authenticated
+2025-12-07 14:43:55 | INFO     | ----------------------------------------
+2025-12-07 14:43:55 | INFO     | Running periodic health check...
+2025-12-07 14:43:56 | INFO     | gh CLI authenticated
+2025-12-07 14:43:56 | INFO     | Health check passed
+2025-12-07 14:43:56 | INFO     | ----------------------------------------
+2025-12-07 14:43:56 | INFO     | Starting sync cycle...
+2025-12-07 14:43:56 | INFO     | Syncing with upstream...
+2025-12-07 14:43:57 | INFO     | Already up to date with upstream
+2025-12-07 14:43:57 | INFO     | Running scraper...
+2025-12-07 14:43:57 | INFO     | Found 79 new URLs to scrape
+2025-12-07 14:44:32 | INFO     | Daemon stopped by user
+2025-12-07 14:44:32 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed\nCall log:\n  - navigating to "https://hk.news.yahoo.com/%E5%AE%8F%E7%A6%8F%E8%8B%91%E4%BA%94%E7%B4%9A%E7%81%AB%EF%BD%9C%E4%BF%9D%E7%9B%A3%E5%B1%80%EF%BC%9A%E6%B6%89%E5%AE%8F%E7%A6%8F%E8%8B%91%E4%BF%9D%E5%96%AE%E5%85%B1-8700-%E5%BC%B5-%E5%B7%B2%E8%A8%AD%E5%B0%88%E8%B2%AC%E5%B0%8F%E7%B5%84%E5%8D%94%E8%AA%BF%EF%BD%9Cyahoo-073800120.html", waiting until "domcontentloaded"\n')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://hk.news.yahoo.com/%E5%AE%8F%E7%A6%8F%E8%8B%91%E4%BA%94%E7%B4%9A%E7%81%AB%EF%BD%9C%E4%BF%9D%E7%9B%A3%E5%B1%80%EF%BC%9A%E6%B6%89%E5%AE%8F%E7%A6%8F%E8%8B%91%E4%BF%9D%E5%96%AE%E5%85%B1-8700-%E5%BC%B5-%E5%B7%B2%E8%A8%AD%E5%B0%88%E8%B2%AC%E5%B0%8F%E7%B5%84%E5%8D%94%E8%AA%BF%EF%BD%9Cyahoo-073800120.html", waiting until "domcontentloaded"
+
+2025-12-07 14:44:32 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
